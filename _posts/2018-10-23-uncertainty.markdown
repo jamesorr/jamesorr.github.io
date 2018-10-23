@@ -6,52 +6,56 @@ description: New tools to easily propagate uncertainties for marine CO<sub>2</su
 ---
 
 Have you ever wanted to include uncertainties along with calculated
-marine CO<sub>2</sub> system variables, but were frustrated by the effort
-required? Well, the job has just gotten a lot easier, so read on.
+marine CO<sub>2</sub> system variables, but were frustrated by the
+effort required? Fortunately, the job to attain this basic good-science
+requirement has just gotten a lot easier.
 
-Marine scientists who study ocean carbon and related variables often use
-two measured or modeled CO<sub>2</sub> system variables to calculate
-the others, taking advantage of available public software
-packages. For instance, ocean pH is often calculated, not
-measured. But what about the uncertainties associated with those
-calculations? Unfortunately, they are seldom reported because
-none of the packages have provided an uncertainty propagation feature.
+Marine scientists who study the ocean CO<sub>2</sub> system often use
+two of its measured or modeled variables to calculate the others,
+doing so with available public software packages. For instance, ocean
+pH is often calculated, not measured or modeled directly. But what
+about the uncertainties associated with those calculations?
+Unfortunately, they are seldom reported because none of the packages
+have provided an uncertainty propagation feature.
 
 The few groups that have reported uncertainties have relied on
-different approaches, different input uncertainties, and in some cases
-non-regionally specific sensitivities of calculated variables to input
-variables.
+different approaches and different input uncertainties, while in some
+cases assuming that sensitivities of calculated variables to input
+variables do not vary.
 
-To allow such uncertainty propagation to become commonplace, the
+To allow such uncertainty propagation to become routine, the
 [OA-ICC](https://www.iaea.org/services/oa-icc) funded an effort to
-provide a consistent set of tools in several public packages.
-Uncertainty propagation add-ons are now available for four public
+code a consistent set of tools in several public packages.
+Uncertainty propagation add-ons are now available for four of these
 packages: [CO2SYS-Excel](https://github.com/jamesorr/CO2SYS-Excel),
 [CO2SYS-MATLAB](https://github.com/jamesorr/CO2SYS-MATLAB),
 [seacarb](http://CRAN.R-project.org/package=seacarb), and
-[mocsy](https://github.com/jamesorr/mocsy).  Those links lead
-directly to the archives from which these packages can be downloaded,
-on CRAN for seacarb and on GitHub for the other 3 packages.
+[mocsy](https://github.com/jamesorr/mocsy).  Clicking on those links
+will lead you directly to the archive where each package can be
+downloaded, on CRAN for seacarb and on GitHub for the other 3
+packages.
 
-The interface for the CO2SYS-Excel add-on comes imbedded as an
-additional "fourth" Excel sheet, where input uncertainties (standard
-uncertainties) are specified and where calculated uncertainties
-(combined standard uncertainties) are displayed (after clicking the
-red START button on Sheet 3). For the add-ons to the other three
-packages, each is provided as a new routine called "errors". Its
-arguments are just like those for the preexisting routine that
-computes carbonate chemistry variables (`CO2SYS.m`, `carb.R`, and
-`vars.f90`, respectively) except that there is also a new line of
-arguments for the input uncertainties.  Besides the typical type of
-documentation for each package, the new archives for CO2SYS-MATLAB,
-seacarb, and mocsy also contain a `notebooks` directory for extensive
-examples using `jupyter` notebooks.  One may simply click on those
-files to visualize their contents as HTML. Otherwise they may be
-downloaded and run interactively as jupyter notebooks.
+The interface for the CO2SYS-Excel add-on is provided in the same file
+as the standard package but as an additional (fourth) Excel sheet,
+where input uncertainties (standard uncertainties) are entered and
+where calculated uncertainties (combined standard uncertainties) are
+displayed (after clicking the red START button on Sheet 3). For the
+add-ons to the other three packages, each is provided as a new routine
+called "errors" with a suffix that depends on the computer language of
+each package (.m, .R, and .f90). Its arguments are just like those for
+the preexisting routine in each package that computes carbonate
+chemistry variables (`CO2SYS.m`, `carb.R`, and `vars.f90`,
+respectively) except that there is also a new line of arguments for
+the input uncertainties.  Besides the typical type of documentation
+for each package, the new archives for CO2SYS-MATLAB, seacarb, and
+mocsy also contain a `notebooks` directory for extensive examples
+using `jupyter` notebooks.  Once in that directory, just click on
+those notebook files to visualize their contents as HTML. Even better,
+download them and and run them interactively in your browser as jupyter
+notebooks.
 
-A new publication details this effort to provide CO<sub>2</sub> system
-uncertainty propagation as a standard feature of relevant software
-packages, while interpreting the first results (Orr et al., 2018).
+A new publication detailing this effort, the tools, and interpretation
+of results is in press (Orr et al., 2018).
 
 
 REFERENCE
