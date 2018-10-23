@@ -13,7 +13,6 @@
   {% if entry.type == "thesis" %}
     {{reference}}
   {% else %}
-    <span class="title">{{entry.title}}</span>
     <span class="author">
       {% for author in entry.author_array %}
         {% if forloop.length == 1 %}
@@ -47,15 +46,43 @@
         {% endif %}
       {% endfor %}
     </span>
+    <span class="title">{{entry.title}},</span>
 
     <span class="periodical">
     {% if entry.type == "article" %}
       <em>{{entry.journal}}</em>
-    {% elsif entry.type == "inproceedings" %}
-      <em>In {{entry.booktitle}}</em>
+      {% if entry.volume %}
+        {{entry.volume}},
+      {% endif %}
+      {% if entry.number %}
+        {{entry.number}},
+      {% endif %}
+    {% elsif entry.type == "incollection" or entry.type == "inproceedings" or entry.type == "inbook"%}
+      {% if entry.editor %}
+        In: {{entry.editor}} (eds.), 
+      {% endif %}
+      <em>{{entry.booktitle}}</em>,
+      {% if entry.series %}
+        {{entry.series}},
+      {% endif %}
+      {% if entry.volume %}
+        vol {{entry.volume}},
+      {% endif %}
+      {% if entry.publisher %}
+        {{entry.publisher}},
+      {% endif %}
+      {% if entry.address %}
+        {{entry.address}},
+      {% endif %}
+    {% endif %}
+    {% if entry.pages %}
+      {{entry.pages}},
+    {% endif %}
+    {% if entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}" target="_blank">doi:{{entry.doi}}</a>,
     {% endif %}
     {% if entry.year %}
-      {{entry.year}}
+      {{entry.year}}.
     {% endif %}
     </span>
   {% endif %}
@@ -66,6 +93,12 @@
   {% endif %}
   {% if entry.arxiv %}
     [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" target="_blank">arXiv</a>]
+  {% endif %}
+  {% if entry.link %}
+    [<a href="{{ entry.link }}" target="_blank">Link</a>]
+  {% endif %}
+  {% if entry.pdflink %}
+    [<a href="{{ entry.pdflink }}" target="_blank">PDF</a>]
   {% endif %}
   {% if entry.html %}
     [<a href="{{ entry.html }}" target="_blank">HTML</a>]

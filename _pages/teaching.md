@@ -2,9 +2,9 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Material from a minicourse that I taught in 2016
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
-
-Organize your courses by years, topics, or universities, however you like!
+[C-CASCADES summer school (2016)](https://cordis.europa.eu/event/rcn/146115_en.html) - minicourse touching on making scientific papers readable:
+* [handout](files/Readability_tips_25aug2016.pdf) on improving readability (flow) 
+* [slide set](files/Orr_C-CASCADES_ReadablePapers_27aug2016.pdf) on flow, tense, voice, ... and books to learn more  

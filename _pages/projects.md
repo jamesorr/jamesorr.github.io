@@ -2,47 +2,19 @@
 layout: page
 title: projects
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: Current projects that I am involved with
 ---
 
-{% for project in site.projects %}
+1. [OMIP](https://www.wcrp-climate.org/modelling-wgcm-mip-catalogue/cmip6-endorsed-mips-article/1063-modelling-cmip6-omip) - Ocean Model Intercomparison Project, which is part of [CMIP6](https://www.geosci-model-dev.net/9/1937/2016/gmd-9-1937-2016.html) and for which I am Co-coordinator. It includes both
+  * [physical aspects](https://www.geosci-model-dev.net/9/3231/2016/) and
+  * [biogeochemical aspects](https://www.geosci-model-dev.net/10/2169/2017/)
 
-{% if project.redirect %}
-<div class="project">
-    <div class="thumbnail">
-        <a href="{{ project.redirect }}" target="_blank">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img | prepend: site.baseurl | prepend: site.url }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}    
-        <span>
-            <h1>{{ project.title }}</h1>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
-    </div>
-</div>
-{% else %}
+2. [SOBUMS](http://sobums.lsce.ipsl.fr) - a French
+[ANR](http://www.agence-nationale-recherche.fr/en/about-anr/about-the-french-national-research-agency/)
+project focused on modeling changes in biogeochemistry in the Southern Ocean, for which I am Coordinator
 
-<div class="project ">
-    <div class="thumbnail">
-        <a href="{{ project.url | prepend: site.baseurl | prepend: site.url }}">
-        {% if project.img %}
-        <img class="thumbnail" src="{{ project.img | prepend: site.baseurl | prepend: site.url }}"/>
-        {% else %}
-        <div class="thumbnail blankbox"></div>
-        {% endif %}    
-        <span>
-            <h1>{{ project.title }}</h1>
-            <br/>
-            <p>{{ project.description }}</p>
-        </span>
-        </a>
-    </div>
-</div>
+3. [C-CASCADES](https://c-cascades.ulb.ac.be) - Carbon Cascades from Land to Ocean in the Anthropocene, an EU Marie Curie Innovative Training Network
 
-{% endif %}
+4. [CRESCENDO](https://www.crescendoproject.eu) - A EU H2020 project on advancing Earth System Modeling
 
-{% endfor %}
+5. [OA-ICC](https://www.iaea.org/services/oa-icc) - Ocean Acidification International Coordination Centre
