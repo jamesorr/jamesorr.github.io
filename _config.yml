@@ -30,7 +30,7 @@ google_analytics: # UA-XXXXXXXXX # out your google-analytics code
 # -----------------------------------------------------------------------------
 # Blog
 # -----------------------------------------------------------------------------
-blog_name: Ocean notes
+blog_name: Ocean C notes
 blog_description:  Snippets for ocean carbon science
 
 # Pagination
