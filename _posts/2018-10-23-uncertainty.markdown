@@ -5,7 +5,7 @@ date: 2018-10-23 15:02:00+0100
 description: New tools to easily propagate uncertainties for marine CO<sub>2</sub> system
 ---
 
-Have you ever wanted to include the uncertainties along with the
+Have you ever wanted to include the uncertainties along with your
 calculated marine CO<sub>2</sub> system variables? Although a basic
 requirement for good science, the only way forward has been to code it
 yourself.  Fortunately, it just got a lot easier.
