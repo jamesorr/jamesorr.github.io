@@ -8,7 +8,7 @@ description: New tools to easily propagate uncertainties for marine CO<sub>2</su
 Have you ever wanted to include the uncertainties along with the
 calculated marine CO<sub>2</sub> system variables? Although a basic
 requirement for good science, the only way forward has been to code it
-oneself.  Fortunately, it just got a lot easier.
+yourself.  Fortunately, it just got a lot easier.
 
 Marine scientists who study the ocean CO<sub>2</sub> system often use
 two of its measured or modeled variables to calculate the others,
