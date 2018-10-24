@@ -19,8 +19,8 @@ Unfortunately, they are seldom reported because none of the packages
 have provided an uncertainty propagation feature.
 
 The few groups that have reported uncertainties have rolled their own,
-relying on different approaches and different input uncertainties,
-while in some cases assuming globally uniform sensitivities of
+relying on different approaches, specifying different input
+uncertainties, and often assuming globally uniform sensitivities of
 calculated variables to input variables.
 
 To allow such uncertainty propagation to become routine, the
