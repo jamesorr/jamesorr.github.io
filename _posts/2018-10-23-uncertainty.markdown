@@ -59,4 +59,4 @@ of results is now in press (Orr et al., 2018).
 
 REFERENCE
 
- Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. Routine uncertainty propagation for the marine carbon dioxide system, Mar. Chem. in press, 2018. 
+ Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. Routine uncertainty propagation for the marine carbon dioxide system, Mar. Chem., in press, https://doi.org/10.1016/j.marchem.2018.10.006, 2018. 
