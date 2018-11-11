@@ -41,7 +41,7 @@ which includes
 components and is part of Phase 6 of the Coupled Model Intercomparison
 Project
 ([CMIP6](https://www.geosci-model-dev.net/9/1937/2016/gmd-9-1937-2016.html)).
-I am also the coordinator of the French
+I am also coordinator of a French
 [ANR](http://www.agence-nationale-recherche.fr/en/about-anr/about-the-french-national-research-agency/)
 project focused on changes in Southern Ocean biogeochemistry
 ([SOBUMS](http://sobums.lsce.ipsl.fr)).
