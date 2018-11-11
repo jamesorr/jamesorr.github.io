@@ -16,18 +16,19 @@ news: true
 social: true
 ---
 
-I am a Senior Scientist at the Climate and Environment Sciences Lab
-([LSCE](https://www.lsce.ipsl.fr/en/)) at the French
-[CEA](https://en.wikipedia.org/wiki/French_Alternative_Energies_and_Atomic_Energy_Commission),
-which I joined in 1992 after a Ph.D. in Oceanography from Texas A&M
-University and postdoctoral research at Princeton University.  My main
+My main
 research focuses on how the ocean is changing due to increasing
 atmospheric CO<sub>2</sub> and the associated changes in climate. Both
 those external factors alter ocean carbon storage and affect ocean
 chemistry and biology.  Often I use ocean models constrained by
-observations to test hypotheses and help characterize trends,
+observations to test hypotheses and help understand trends,
 variability, and extremes in carbon and related variables in the
 ocean.
+I am a Senior Scientist at the Climate and Environment Sciences Lab
+([LSCE](https://www.lsce.ipsl.fr/en/)) at the French
+[CEA](https://en.wikipedia.org/wiki/French_Alternative_Energies_and_Atomic_Energy_Commission),
+which I joined in 1992 after a Ph.D. in Oceanography from Texas A&M
+University and postdoctoral research at Princeton University.  
 
 Currently, I serve as Chair of the SOLAS-IMBER Working Group on Ocean
 Acidification
