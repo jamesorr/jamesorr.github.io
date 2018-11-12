@@ -2,7 +2,7 @@
 layout: about
 permalink: /
 title: James Orr
-description: <a href="https://www.lsce.ipsl.fr/en">Affiliations</a>. LSCE/IPSL, CEA-CNRS-UVSQ, Universite Paris Saclay
+description: <a href="https://www.lsce.ipsl.fr/en" target="_blank">LSCE</a> (<a href="http://www.cea.fr/english" target="_blank">CEA</a>-<a href="http://www.cnrs.fr" target="_blank">CNRS</a>-<a href="http://www.uvsq.fr/welcome-uvsq-371399.kjsp?RH=VF&RF=EN" target="_blank">UVSQ</a>), <a href="https://www.ipsl.fr/en" target="_blank">IPSL</a>,  <a href="https://www.universite-paris-saclay.fr/en" target="_blank">Universit&eacute; Paris Saclay</a>
 
 profile:
   align: right
