@@ -12,6 +12,13 @@ example, with $$pCO2 = f(DIC, Alk, T, S)$$, we often rely on a
 first-order Taylor-series decomposition to quantify the
 contributions the total change in pCO2 
 
+$$
+\Delta pCO2 = \frac{\partial pCO2}{\partial DIC} \Delta DIC
+            + \frac{\partial pCO2}{\partial Alk} \Delta Alk
+	    + \frac{\partial pCO2}{\partial T} \Delta T
+	    + \frac{\partial pCO2}{\partial S} \Delta S
+$$
+
 That equation sums the contributions from the simultaneous changes
 ($$\Delta$$) in the 4 input variables, where each is multiplied by a
 partial derivative (sensitivity) giving it the same units as the total
@@ -64,7 +71,7 @@ REFERENCES
 
 Kwiatkowski, L., and Orr, J. C. (2018) Diverging seasonal extremes for
 ocean acidification during the twenty-first century, Nature Climate
-Change 8, 2, 141–145,
+Change 8, 2, 141-145,
 [doi:10.1038/s41558-017-0054-0](https://www.nature.com/articles/s41558-017-0054-0).
 
 Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. (2018) Routine uncertainty propagation for the marine carbon dioxide system, *Mar. Chem. 207,* 84-107, [doi:9.1016/j.marchem.2018.10.006](https://doi.org/10.1016/j.marchem.2018.10.006). 
