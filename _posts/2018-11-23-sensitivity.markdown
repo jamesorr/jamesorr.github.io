@@ -75,6 +75,8 @@ in each package that computes carbonate chemistry variables
 (`CO2SYS.m`, `carb.R`, and `vars.f90`, respectively) except that there
 is also one new argument added to the beginning of the list to specify
 the variable with respect to which derivatives will be taken.
+The `derivnum.f90` routine in mocsy was used by [Kwiatkowski and Orr
+(2018)](https://www.nature.com/articles/s41558-017-0054-0).
 
 Besides the typical documentation for each package, the new archives
 for CO2SYS-MATLAB, seacarb, and mocsy also contain a `notebooks`
