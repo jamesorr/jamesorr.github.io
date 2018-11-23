@@ -29,10 +29,10 @@ being multiplied by a partial derivative (sensitivity) so that each
 term on the right has same units as the total change term on the left.
 
 If results don't add up (i.e., the right side does not equal the
-left), there are three potential causes: (1) the $$\Delta$$s are not
-accurate enough, e.g., from imprecise measurements, (2) the
-$$\Delta$$s are too large and the system is nonlinear, or (3) the
-sensitivities are inaccurate.
+left), there are three potential causes:
+1. the $$\Delta$$s are not accurate enough, e.g., from imprecise measurements,
+2. the $$\Delta$$s are too large and the system is nonlinear, or
+3. the sensitivities are inaccurate.
 
 In models, the first concern is not an issue because the $$\Delta$$s
 are internally consistent.  The second concern might also be neglected
