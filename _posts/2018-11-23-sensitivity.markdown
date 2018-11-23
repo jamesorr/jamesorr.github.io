@@ -9,9 +9,10 @@ If you're a marine scientist attempting to distinguish the contributions to
 variations in CO<sub>2</sub> system variables, you should be very concerned
 about how you compute the sensitivities of one variable to others.
 Such deconvolution is often done by applying a first-order Taylor
-series decomposition, but results don't always add up.  For example,
-with $$p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)$$, i.e.,
-neglecting contributions for dissolved inorganic phosphorus and
+series decomposition, but results don't always add up. The problem may well be the sensitivities.
+
+For example, with $$p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)$$,
+i.e., neglecting contributions for dissolved inorganic phosphorus and
 silicon, such a decomposition looks like
 
 $$
@@ -36,13 +37,14 @@ sensitivities are inaccurate.
 
 In models, the first concern is not an issue because the $$\Delta$$s
 are internally consistent.  The second concern might also be neglected
-based on results from a recent model study.  Kwiatkowski and Orr
-(2018) deconvolved modeled seasonal amplitudes of CO<sub>2</sub>
-system variables, i.e., where the $$\Delta$$s are typically quite
-large, but in all cases their results added up precisely. Their
-success appears to stem from the internal consistency and presumably
-the accuracy of their calculated sensitivities, an issue that has not
-received enough attention.
+based on results from a recent model study.  [Kwiatkowski and Orr
+(2018)](https://www.nature.com/articles/s41558-017-0054-0) deconvolved
+modeled seasonal amplitudes of CO<sub>2</sub> system variables, i.e.,
+where the $$\Delta$$s are typically quite large, but in all cases
+their results added up precisely. Their success appears to stem from
+the internal consistency and presumably the accuracy of their
+calculated sensitivities, an issue that has not received enough
+attention.
 
 Sometimes sensitivities have been approximated by neglecting some
 terms to get at a straightforward analytical approximation.  These
@@ -59,7 +61,7 @@ Accurate sensitivities are provided as part of the set of new routines that
 were released along with the publication describing the
 [OA-ICC](https://www.iaea.org/services/oa-icc)-funded effort to
 provide uncertainty propagation add-ons in several public software packages
-that compute CO2 system variables(Orr et al., 2018). These packages include
+that compute CO2 system variables [(Orr et al., 2018)](https://doi.org/10.1016/j.marchem.2018.10.006). These packages include
 [CO2SYS-MATLAB](https://github.com/jamesorr/CO2SYS-MATLAB),
 [seacarb](http://CRAN.R-project.org/package=seacarb), and
 [mocsy](https://github.com/jamesorr/mocsy). Clicking on those links
@@ -86,7 +88,9 @@ file to visualize its contents as HTML. Even better, if you download a
 package, those notebook files will be available locally; you may run
 them interactively in your browser as `jupyter` notebooks.
 
-More details about these routines are available in Orr et al. (2018).
+More details about these routines are available in [Orr et
+al. (2018)](https://doi.org/10.1016/j.marchem.2018.10.006).
+
 
 
 REFERENCES
