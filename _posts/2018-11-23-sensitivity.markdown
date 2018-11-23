@@ -16,7 +16,7 @@ i.e., neglecting contributions for dissolved inorganic phosphorus and
 silicon, such a decomposition looks like
 
 $$
-\Delta p\text{CO}_2 = \frac{\partial p\text{CO}_2}{\partial \text{DIC}} \Delta \text{DIC}
+\Delta p\text{CO}_2 \approx \frac{\partial p\text{CO}_2}{\partial \text{DIC}} \Delta \text{DIC}
             + \frac{\partial p\text{CO}_2}{\partial \text{Alk}} \Delta \text{Alk}
 	    + \frac{\partial p\text{CO}_2}{\partial T} \Delta T
 	    + \frac{\partial p\text{CO}_2}{\partial S} \Delta S
