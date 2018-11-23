@@ -60,7 +60,7 @@ Accurate sensitivities are provided as part of the set of new routines that
 were released along with the publication describing the
 [OA-ICC](https://www.iaea.org/services/oa-icc)-funded effort to
 provide uncertainty propagation add-ons in several public software packages
-that compute CO2 system variables [(Orr et al., 2018)](https://doi.org/10.1016/j.marchem.2018.10.006). These packages include
+that compute CO<sub>2</sub> system variables [(Orr et al., 2018)](https://doi.org/10.1016/j.marchem.2018.10.006). These packages include
 [CO2SYS-MATLAB](https://github.com/jamesorr/CO2SYS-MATLAB),
 [seacarb](http://CRAN.R-project.org/package=seacarb), and
 [mocsy](https://github.com/jamesorr/mocsy). Clicking on those links
