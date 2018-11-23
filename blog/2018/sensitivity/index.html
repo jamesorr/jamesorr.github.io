@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>James C. Orr | Easy exact sensitivities for ocean CO<sub>2</sub> system</title>
+  <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+">
+
+  <link rel="shortcut icon" href="/assets/img/favicon.ico">
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="canonical" href="/blog/2018/sensitivity/">
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    
+    <span class="site-title">
+        
+        <strong>James Orr</strong>
+    </span>
+    
+
+    <nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+      <div class="trigger">
+        <!-- About -->
+        <a class="page-link" href="/">about</a>
+
+        <!-- Blog -->
+        <a class="page-link" href="/blog/">blog</a>
+
+        <!-- Pages -->
+        
+          
+        
+          
+            <a class="page-link" href="/code/">code</a>
+          
+        
+          
+        
+          
+        
+          
+            <a class="page-link" href="/projects/">projects</a>
+          
+        
+          
+            <a class="page-link" href="/publications/">publications</a>
+          
+        
+          
+            <a class="page-link" href="/teaching/">teaching</a>
+          
+        
+          
+        
+
+        <!-- CV link -->
+        <!-- <a class="page-link" href="/assets/pdf/CV.pdf">vitae</a> -->
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
+
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Easy exact sensitivities for ocean CO<sub>2</sub> system</h1>
+    <p class="post-meta">November 23, 2018</p>
+  </header>
+
+  <article class="post-content">
+    <p>If you’re a marine scientist attempting to deconvolve the contributions to
+variations in CO<sub>2</sub> system variables, you should be very concerned
+about how you compute the sensitivities of one variable to others.
+Such deconvolution is often done by applying a first-order Taylor
+series decomposition, but results don’t always add up.</p>
+
+<p>For example, with <script type="math/tex">p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)</script>,
+i.e., neglecting contributions for dissolved inorganic phosphorus and
+silicon, such a decomposition looks like</p>
+
+<script type="math/tex; mode=display">\Delta p\text{CO}_2 \approx \frac{\partial p\text{CO}_2}{\partial \text{DIC}} \Delta \text{DIC}
+            + \frac{\partial p\text{CO}_2}{\partial \text{Alk}} \Delta \text{Alk}
+	    + \frac{\partial p\text{CO}_2}{\partial T} \Delta T
+	    + \frac{\partial p\text{CO}_2}{\partial S} \Delta S
+\text{.}</script>
+
+<p>That equation sums the contributions from the simultaneous change
+(<script type="math/tex">\Delta</script>) in each of the 4 input variables, with each <script type="math/tex">\Delta</script>
+being multiplied by a partial derivative (sensitivity) so that each
+term on the right has same units as the total change term on the left.</p>
+
+<p>If results don’t add up (i.e., the right side does not equal the
+left), there are three potential causes:</p>
+<ol>
+  <li>the <script type="math/tex">\Delta</script>s are not accurate enough, e.g., from imprecise measurements,</li>
+  <li>the <script type="math/tex">\Delta</script>s are too large and the system is nonlinear, or</li>
+  <li>the sensitivities are inaccurate.</li>
+</ol>
+
+<p>In models, the first concern is not an issue because the <script type="math/tex">\Delta</script>s
+are internally consistent.  The second concern might also be neglected
+based on results from a recent model study.  <a href="https://www.nature.com/articles/s41558-017-0054-0">Kwiatkowski and Orr
+(2018)</a> deconvolved
+modeled seasonal amplitudes of CO<sub>2</sub> system variables, i.e.,
+where the <script type="math/tex">\Delta</script>s are typically quite large, but in all cases
+their results added up precisely. Their success appears to stem from
+the internal consistency and presumably the accuracy of their
+calculated sensitivities, an issue that has not received enough
+attention.</p>
+
+<p>Sometimes sensitivities have been approximated by neglecting some
+terms to get at a straightforward analytical approximation.  These
+approximations are useful to help understand the system. But
+their accuracy also matters when performing a Taylor series
+decomposition because there is a delicate balance between terms in
+some regions. Even minor imprecisions in the sensitivities of say 10%
+can lead to things not adding up and thus to the wrong conclusions. So
+if your deconvolution terms don’t add up, stop and check your
+sensitivities. Make sure that they are accurate.</p>
+
+<p>Fortunately, it is now easy to avoid approximated sensitivities.
+Accurate sensitivities are provided as part of the set of new routines that
+were released along with the publication describing the
+<a href="https://www.iaea.org/services/oa-icc">OA-ICC</a>-funded effort to
+provide uncertainty propagation add-ons in several public software packages
+that compute CO<sub>2</sub> system variables <a href="https://doi.org/10.1016/j.marchem.2018.10.006">(Orr et al., 2018)</a>. These packages include
+<a href="https://github.com/jamesorr/CO2SYS-MATLAB">CO2SYS-MATLAB</a>,
+<a href="http://CRAN.R-project.org/package=seacarb">seacarb</a>, and
+<a href="https://github.com/jamesorr/mocsy">mocsy</a>. Clicking on those links
+will lead you directly to the archive where each package can be
+downloaded, on CRAN for seacarb and on GitHub for the other 2
+packages.</p>
+
+<p>Each package includes a new routine called <code class="highlighter-rouge">derivnum</code> with a suffix that
+depends on the computer language of each package (<code class="highlighter-rouge">.m</code>, <code class="highlighter-rouge">.R</code>, and
+<code class="highlighter-rouge">.f90</code>). Input arguments are just like those for the preexisting routine
+in each package that computes carbonate chemistry variables
+(<code class="highlighter-rouge">CO2SYS.m</code>, <code class="highlighter-rouge">carb.R</code>, and <code class="highlighter-rouge">vars.f90</code>, respectively) except that there
+is also one new argument added to the beginning of the list to specify
+the variable with respect to which derivatives will be taken.
+The <code class="highlighter-rouge">derivnum.f90</code> routine in mocsy was used by <a href="https://www.nature.com/articles/s41558-017-0054-0">Kwiatkowski and Orr
+(2018)</a>.</p>
+
+<p>Besides the typical documentation for each package, the new archives
+for CO2SYS-MATLAB, seacarb, and mocsy also contain a <code class="highlighter-rouge">notebooks</code>
+directory, which itself contains <code class="highlighter-rouge">jupyter</code> notebook files with
+extensive examples.  Jupyter has been highlighted in a recent <a href="https://www.nature.com/articles/d41586-018-07196-1"><em>Nature</em>
+piece</a> as the way
+forward for scientists dealing with such data analysis. Once in that
+<code class="highlighter-rouge">notebooks</code> directory, just click on the appropriately named notebook
+file to visualize its contents as HTML. Even better, if you download a
+package, those notebook files will be available locally; you may run
+them interactively in your browser as <code class="highlighter-rouge">jupyter</code> notebooks.</p>
+
+<p>More details about these routines are available in <a href="https://doi.org/10.1016/j.marchem.2018.10.006">Orr et
+al. (2018)</a>.</p>
+
+<p>REFERENCES</p>
+
+<p>Kwiatkowski, L., and Orr, J. C. (2018) Diverging seasonal extremes for
+ocean acidification during the twenty-first century, Nature Climate
+Change 8, 2, 141-145,
+<a href="https://www.nature.com/articles/s41558-017-0054-0">doi:10.1038/s41558-017-0054-0</a>.</p>
+
+<p>Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. (2018)
+Routine uncertainty propagation for the marine carbon dioxide system,
+<em>Mar. Chem. 207,</em> 84-107,
+<a href="https://doi.org/10.1016/j.marchem.2018.10.006">doi:9.1016/j.marchem.2018.10.006</a>.</p>
+
+
+  </article>
+
+  
+
+</div>
+
+      </div>
+    </div>
+
+    <footer>
+
+  <div class="wrapper">
+    &copy; Copyright 2018 James C. Orr.
+    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+
+    
+  </div>
+
+</footer>
+
+
+    <!-- Load jQuery -->
+<script src="//code.jquery.com/jquery-1.12.4.min.js"></script>
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+
+<!-- Load KaTeX -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.9.0/katex.min.js"></script>
+<script src="/assets/js/katex.js"></script>
+
+
+
+
+<!-- Include custom icon fonts -->
+<link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/assets/css/academicons.min.css">
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', '', 'auto');
+ga('send', 'pageview');
+</script>
+
+
+  </body>
+
+</html>
