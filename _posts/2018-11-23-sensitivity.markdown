@@ -98,6 +98,8 @@ ocean acidification during the twenty-first century, Nature Climate
 Change 8, 2, 141-145,
 [doi:10.1038/s41558-017-0054-0](https://www.nature.com/articles/s41558-017-0054-0).
 
-Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. (2018) Routine uncertainty propagation for the marine carbon dioxide system, *Mar. Chem. 207,* 84-107, [doi:9.1016/j.marchem.2018.10.006](https://doi.org/10.1016/j.marchem.2018.10.006). 
+Orr, J. C., Epitalon, J.-M., Dickson, A. G., and Gattuso, J.-P. (2018)
+Routine uncertainty propagation for the marine carbon dioxide system,
+*Mar. Chem. 207,* 84-107,
+[doi:9.1016/j.marchem.2018.10.006](https://doi.org/10.1016/j.marchem.2018.10.006).
 
-LocalWords:  Alk frac derivnum carb
