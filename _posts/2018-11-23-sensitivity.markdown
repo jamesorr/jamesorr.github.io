@@ -5,14 +5,13 @@ date: 2018-11-23 12:02:00+0100
 description: New tools to help deconvolve controls of marine CO<sub>2</sub> variables
 ---
 
-When marine scientist attempt to deconvolve contributions to
-variations in CO<sub>2</sub> system variables, the biggest problem may
-be how they compute the sensitivities of one variable
-to others.  Such deconvolution is often done by applying a first-order
-Taylor series decomposition, but results don't always add up.
-
-For example, with $$p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)$$,
-i.e., neglecting contributions for dissolved inorganic phosphorus and
+If you're a marine scientist attempting to distinguish the contributions to
+variations in CO<sub>2</sub> system variables, you should be very concerned
+about how you compute the sensitivities of one variable to others.
+Such deconvolution is often done by applying a first-order Taylor
+series decomposition, but results don't always add up.  For example,
+with $$p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)$$, i.e.,
+neglecting contributions for dissolved inorganic phosphorus and
 silicon, such a decomposition looks like
 
 $$
