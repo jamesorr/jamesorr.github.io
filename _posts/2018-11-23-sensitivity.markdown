@@ -5,11 +5,11 @@ date: 2018-11-23 12:02:00+0100
 description: New tools to help deconvolve controls of marine CO<sub>2</sub> variables
 ---
 
-If you're a marine scientist attempting to distinguish the contributions to
+If you're a marine scientist attempting to deconvolve the contributions to
 variations in CO<sub>2</sub> system variables, you should be very concerned
 about how you compute the sensitivities of one variable to others.
 Such deconvolution is often done by applying a first-order Taylor
-series decomposition, but results don't always add up. The problem may well be the sensitivities.
+series decomposition, but results don't always add up.
 
 For example, with $$p\text{CO}_2 = f(\text{DIC}, \text{Alk}, T, S)$$,
 i.e., neglecting contributions for dissolved inorganic phosphorus and
@@ -26,10 +26,9 @@ $$
 That equation sums the contributions from the simultaneous change
 ($$\Delta$$) in each of the 4 input variables, with each $$\Delta$$
 being multiplied by a partial derivative (sensitivity) so that each
-product term has same units as the total change (left side of the
-equation).
+term on the right has same units as the total change term on the left.
 
-If results do not add up (i.e., the right side does not equal the
+If results don't add up (i.e., the right side does not equal the
 left), there are three potential causes: (1) the $$\Delta$$s are not
 accurate enough, e.g., from imprecise measurements, (2) the
 $$\Delta$$s are too large and the system is nonlinear, or (3) the
@@ -53,7 +52,7 @@ their accuracy also matters when performing a Taylor series
 decomposition because there is a delicate balance between terms in
 some regions. Even minor imprecisions in the sensitivities of say 10%
 can lead to things not adding up and thus to the wrong conclusions. So
-if your deconvolution terms don't add up, the first thing to check is your
+if your deconvolution terms don't add up, stop and check your
 sensitivities. Make sure that they are accurate.
 
 Fortunately, it is now easy to avoid approximated sensitivities.
@@ -90,7 +89,6 @@ them interactively in your browser as `jupyter` notebooks.
 
 More details about these routines are available in [Orr et
 al. (2018)](https://doi.org/10.1016/j.marchem.2018.10.006).
-
 
 
 REFERENCES
